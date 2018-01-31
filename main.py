@@ -12,12 +12,20 @@ from init.Init import INIT
 
 
 def find_all_files(directory):
-    # for root, dirs, files in os.walk(directory):
-    #     yield root
-    #     for file in files:
-    #         yield os.path.join(root, file)
-    for root, dirs, files in os.walk(directory):
-        print(root, dirs, files)
+    result = {}
+
+    # get author's name
+    files = os.listdir(directory)
+    authors = [f for f in files if os.path.isdir(os.path.join(directory, f))]
+
+    # get author's book
+    for author in authors:
+        path = os.path.join(directory, author)
+        files = os.listdir(path)
+        result[author] = [f for f in files if os.path.isdir(os.path.join(path, f))]
+
+    print(result)
+
 
 
 # === MAIN ===
