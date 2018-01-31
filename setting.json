@@ -1,6 +1,4 @@
 {
-    "Downloads_place": "~/Downloads/Downloaded/h_manga/",
-    "Zip_place": "~/Downloads/Manga/zip/",
-    "Manga_place": "~/Downloads/Manga/",
-    "Pic_plase": "~/Downloads/Picture/"
+    "source_place": "~/Downloads/Manga/",
+    "destination_place": "~/Downloads/test/",
 }
